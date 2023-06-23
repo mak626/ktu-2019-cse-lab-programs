@@ -1,0 +1,13 @@
+BUFTOREC     START        3000
+WRREC        LDX          ZERO
+WLOOP        TD           OUTPUT
+ **          JEQ          WLOOP
+ **          LDCH         BUFFER,X
+ **          WD           OUTPUT
+ **          TIX          LENGTH
+ **          JLT          WLOOP
+OUTPUT       BYTE         X'05'   
+ZERO         WORD         0
+BUFFER       RESB         4096
+LENGTH       RESW         1
+**           END          WRREC

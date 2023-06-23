@@ -1,0 +1,25 @@
+{
+  "files.associations": {
+    ".env": "dotenv",
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.html": "html",
+    "climits": "c",
+    "cmath": "c",
+    "cstdarg": "c",
+    "cstdio": "c",
+    "cstdlib": "c",
+    "cwchar": "c",
+    "cwctype": "c",
+    "type_traits": "c",
+    "limits": "c",
+    "*.tcc": "c",
+    "cstdint": "c",
+    "typeinfo": "c",
+    "string.h": "c",
+    "stdio.h": "c",
+    "ctype.h": "c"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "files.associations": {
+    ".env": "dotenv",
+    "bitset": "c",
+    "cstdlib": "c",
+    "algorithm": "c",
+    "functional": "c",
+    "regex": "c",
+    "array": "c",
+    "*.tcc": "c",
+    "string": "c",
+    "vector": "c",
+    "string_view": "c",
+    "iomanip": "c",
+    "istream": "c",
+    "limits": "c",
+    "ostream": "c",
+    "ratio": "c",
+    "sstream": "c",
+    "streambuf": "c",
+    "optional": "c",
+    "system_error": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c",
+    "variant": "c",
+    "typeinfo": "c"
+  }
+}

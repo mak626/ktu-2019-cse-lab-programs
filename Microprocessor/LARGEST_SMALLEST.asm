@@ -1,0 +1,43 @@
+DATA1 SEGMENT
+	LIST DB 7FH,12H,26H,0F1H,79H
+	COUNT EQU 05H
+	LARGEST DB 1 DUP(0)
+	SMALLEST DB 1 DUP(0)
+DATA1 ENDS
+
+CODE1 SEGMENT
+	ASSUME CS: CODE1, DS: DATA1
+	START: 
+		MOV AX, DATA1
+		MOV DS, AX
+		
+		_LARGEST:
+			MOV CX,COUNT - 1
+			MOV SI, OFFSET LIST
+			MOV AL, [SI] ; AL holds the largest value
+			L1:
+				CMP AL,[SI+1]
+				JAE L2 ; Jump if AL >= [SI+1]
+				MOV AL, [SI+1]
+			L2: 
+				INC SI
+				LOOP L1
+			MOV LARGEST,AL
+			
+		_SMALLEST:
+			MOV CX,COUNT - 1
+			MOV SI, OFFSET LIST
+			MOV AL, [SI] ; AL holds the largest value
+			_L1:
+				CMP AL,[SI+1]
+				JBE _L2 ; Jump if AL >= [SI+1]
+				MOV AL, [SI+1]
+			_L2: 
+				INC SI
+				LOOP _L1
+			MOV SMALLEST,AL
+		
+		MOV AH, 4CH
+		INT 21H
+CODE1 ENDS
+	END START

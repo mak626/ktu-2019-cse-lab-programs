@@ -1,0 +1,5 @@
+A=A*B
+if X > Y , goto Z
+C=D-M
+M=I/K
+K=I+K

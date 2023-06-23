@@ -1,0 +1,7 @@
+BUFTOREC        3000
+WRREC           3000
+WLOOP           3003
+OUTPUT          3015
+ZERO            3016
+BUFFER          3019
+LENGTH          4019

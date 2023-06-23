@@ -1,0 +1,1062 @@
+   PREPROCESSOR DIRECTIVE | #include <ctype.h>
+   PREPROCESSOR DIRECTIVE | #include <stdbool.h>
+   PREPROCESSOR DIRECTIVE | #include <stdio.h>
+   PREPROCESSOR DIRECTIVE | #include <string.h>
+                  KEYWORD | struct
+             BLOCK BEGINS | {
+                  KEYWORD | int
+               IDENTIFIER | line_no
+                  KEYWORD | char
+               IDENTIFIER | type
+                   NUMBER | 50
+                  KEYWORD | char
+               IDENTIFIER | token
+                   NUMBER | 50
+               BLOCK ENDS | }
+               IDENTIFIER | table
+                   NUMBER | 10000
+                  KEYWORD | int
+               IDENTIFIER | table_len
+                 OPERATOR | =
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+             BLOCK BEGINS | {
+               IDENTIFIER | bool
+               IDENTIFIER | valid
+                  KEYWORD | int
+               IDENTIFIER | index
+                  KEYWORD | char
+               IDENTIFIER | str
+                   NUMBER | 200
+               BLOCK ENDS | }
+                  KEYWORD | void
+               IDENTIFIER | insert
+                  KEYWORD | int
+               IDENTIFIER | line_no
+                  KEYWORD | char
+               IDENTIFIER | type
+                   NUMBER | 50
+                  KEYWORD | char
+               IDENTIFIER | lex
+                   NUMBER | 50
+             BLOCK BEGINS | {
+               IDENTIFIER | table
+               IDENTIFIER | table_len
+               IDENTIFIER | line_no
+                 OPERATOR | =
+               IDENTIFIER | line_no
+               IDENTIFIER | strcpy
+               IDENTIFIER | table
+               IDENTIFIER | table_len
+               IDENTIFIER | type
+               IDENTIFIER | type
+               IDENTIFIER | strcpy
+               IDENTIFIER | table
+               IDENTIFIER | table_len
+               IDENTIFIER | token
+               IDENTIFIER | lex
+               IDENTIFIER | table_len
+                 OPERATOR | +
+                 OPERATOR | +
+               BLOCK ENDS | }
+               IDENTIFIER | bool
+               IDENTIFIER | isSeparator
+                  KEYWORD | char
+               IDENTIFIER | ch
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | test
+                 OPERATOR | =
+                   STRING | ";[]{}()"
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | test
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+               IDENTIFIER | test
+               IDENTIFIER | i
+                  KEYWORD | return
+               IDENTIFIER | true
+               BLOCK ENDS | }
+                  KEYWORD | return
+               IDENTIFIER | false
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | isKeyword
+                  KEYWORD | int
+               IDENTIFIER | index
+                  KEYWORD | char
+               IDENTIFIER | str
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | test
+                   NUMBER | 40
+                 OPERATOR | =
+             BLOCK BEGINS | {
+                   STRING | "printf"
+                   STRING | "double"
+                   STRING | "float"
+                   STRING | "void"
+                   STRING | "else"
+                   STRING | "main"
+                   STRING | "for"
+                   STRING | "int"
+                   STRING | "if"
+               BLOCK ENDS | }
+                  COMMENT | // order this in desc(strlen())
+                  KEYWORD | int
+               IDENTIFIER | tests_len
+                 OPERATOR | =
+                  KEYWORD | int
+               IDENTIFIER | maxLen
+                 OPERATOR | =
+                 OPERATOR | +
+                  COMMENT | // +1 for empty char check. 6 is length of printf
+                  KEYWORD | char
+               IDENTIFIER | buffer
+                   NUMBER | 40
+                 OPERATOR | =
+                   STRING | ""
+               IDENTIFIER | strncpy
+               IDENTIFIER | buffer
+               IDENTIFIER | str
+                 OPERATOR | +
+               IDENTIFIER | index
+               IDENTIFIER | maxLen
+                  KEYWORD | char
+               IDENTIFIER | result
+                   NUMBER | 40
+                 OPERATOR | =
+                   STRING | ""
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | tests_len
+               IDENTIFIER | i
+                 OPERATOR | +
+                 OPERATOR | +
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | j
+                 OPERATOR | =
+               IDENTIFIER | j
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | test
+               IDENTIFIER | i
+               IDENTIFIER | j
+                 OPERATOR | +
+                 OPERATOR | +
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | test
+               IDENTIFIER | i
+               IDENTIFIER | j
+      RELATIONAL OPERATOR | !=
+               IDENTIFIER | buffer
+               IDENTIFIER | j
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                 FUNCTION | if (
+               IDENTIFIER | found
+      RELATIONAL OPERATOR | ==
+               IDENTIFIER | true
+             BLOCK BEGINS | {
+               IDENTIFIER | strcpy
+               IDENTIFIER | result
+               IDENTIFIER | test
+               IDENTIFIER | i
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  KEYWORD | int
+               IDENTIFIER | rindex
+                 OPERATOR | =
+                 FUNCTION | if (
+               IDENTIFIER | found
+               IDENTIFIER | buffer
+               IDENTIFIER | strlen
+               IDENTIFIER | result
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ' '
+               IDENTIFIER | buffer
+               IDENTIFIER | strlen
+               IDENTIFIER | result
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '('
+               IDENTIFIER | rindex
+                 OPERATOR | =
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | strlen
+               IDENTIFIER | result
+                 OPERATOR | -
+                  KEYWORD | else
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | found
+               IDENTIFIER | r
+               IDENTIFIER | index
+                 OPERATOR | =
+               IDENTIFIER | rindex
+               IDENTIFIER | strcpy
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | result
+                  KEYWORD | return
+               IDENTIFIER | r
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | isIdentifier
+                  KEYWORD | int
+               IDENTIFIER | index
+                  KEYWORD | char
+               IDENTIFIER | str
+             BLOCK BEGINS | {
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | false
+                 FUNCTION | if (
+               IDENTIFIER | isalpha
+               IDENTIFIER | str
+               IDENTIFIER | index
+               IDENTIFIER | str
+               IDENTIFIER | index
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '_'
+      RELATIONAL OPERATOR | ==
+                  COMMENT | // Not starting with alphabet or _
+                  KEYWORD | return
+               IDENTIFIER | r
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+                 FUNCTION | for (
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | ch
+                 OPERATOR | =
+               IDENTIFIER | str
+               IDENTIFIER | i
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ' '
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ';'
+                  KEYWORD | break
+                  KEYWORD | else
+                 FUNCTION | if (
+               IDENTIFIER | isalnum
+               IDENTIFIER | ch
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '_'
+                  KEYWORD | continue
+                  KEYWORD | else
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | found
+               IDENTIFIER | strncpy
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | str
+                 OPERATOR | +
+               IDENTIFIER | index
+               IDENTIFIER | i
+                 OPERATOR | -
+               IDENTIFIER | index
+               IDENTIFIER | r
+               IDENTIFIER | index
+                 OPERATOR | =
+               IDENTIFIER | i
+                 OPERATOR | -
+                  KEYWORD | return
+               IDENTIFIER | r
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | isOperator
+                  KEYWORD | char
+               IDENTIFIER | ch
+                  KEYWORD | char
+               IDENTIFIER | ch_n
+                  KEYWORD | int
+               IDENTIFIER | index
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | str
+                   NUMBER | 50
+                 OPERATOR | =
+                   STRING | ""
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c"
+               IDENTIFIER | ch
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  COMMENT | // Equal combinations: <=, >=, +=, -= ...
+                  KEYWORD | char
+               IDENTIFIER | test
+                 OPERATOR | =
+                   STRING | "+-*/=<>!"
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | test
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+               IDENTIFIER | test
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch_n
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '='
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c%c"
+               IDENTIFIER | ch
+               IDENTIFIER | ch_n
+                  KEYWORD | else
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c"
+               IDENTIFIER | ch
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  COMMENT | // Logical AND, OR
+                 FUNCTION | if (
+               IDENTIFIER | found
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '&'
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '|'
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch_n
+      RELATIONAL OPERATOR | ==
+               IDENTIFIER | ch
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c%c"
+               IDENTIFIER | ch
+               IDENTIFIER | ch_n
+                  KEYWORD | else
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c"
+               IDENTIFIER | ch
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  COMMENT | // Single operator
+                 FUNCTION | if (
+               IDENTIFIER | found
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | test1
+                 OPERATOR | =
+                   STRING | "%^"
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | test1
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+               IDENTIFIER | test1
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+               IDENTIFIER | sprintf
+               IDENTIFIER | str
+                   STRING | "%c"
+               IDENTIFIER | ch
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | found
+               IDENTIFIER | r
+               IDENTIFIER | index
+                 OPERATOR | =
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | -
+               IDENTIFIER | strcpy
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | str
+                  KEYWORD | return
+               IDENTIFIER | r
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | isConstant
+                  KEYWORD | int
+               IDENTIFIER | index
+                  KEYWORD | char
+               IDENTIFIER | str
+             BLOCK BEGINS | {
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | false
+                 FUNCTION | if (
+               IDENTIFIER | str
+               IDENTIFIER | index
+      RELATIONAL OPERATOR | !=
+                CHARACTER | '\"'
+                  KEYWORD | return
+               IDENTIFIER | r
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+                 FUNCTION | for (
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | str
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '\"'
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | found
+               IDENTIFIER | strncpy
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | str
+                 OPERATOR | +
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | i
+                 OPERATOR | -
+               IDENTIFIER | index
+                 OPERATOR | -
+                  COMMENT | // INDEX+1 & INDEX-1 to avoid trailing "
+               IDENTIFIER | r
+               IDENTIFIER | index
+                 OPERATOR | =
+               IDENTIFIER | i
+                  KEYWORD | return
+               IDENTIFIER | r
+               BLOCK ENDS | }
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | isNumber
+                  KEYWORD | int
+               IDENTIFIER | index
+                  KEYWORD | char
+               IDENTIFIER | str
+             BLOCK BEGINS | {
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | false
+                 FUNCTION | if (
+               IDENTIFIER | isdigit
+               IDENTIFIER | str
+               IDENTIFIER | index
+                  COMMENT | // Not a digit
+                  KEYWORD | return
+               IDENTIFIER | r
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+               IDENTIFIER | bool
+               IDENTIFIER | decimalFound
+                 OPERATOR | =
+               IDENTIFIER | false
+               IDENTIFIER | bool
+               IDENTIFIER | exponentFound
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+                 FUNCTION | for (
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | index
+                 OPERATOR | +
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | ch
+                 OPERATOR | =
+               IDENTIFIER | str
+               IDENTIFIER | i
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '.'
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | decimalFound
+               IDENTIFIER | exponentFound
+               IDENTIFIER | decimalFound
+                 OPERATOR | =
+               IDENTIFIER | true
+                  KEYWORD | else
+                  COMMENT | // Two decimals found || exponent before decimal
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  KEYWORD | else
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | 'e'
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | exponentFound
+               IDENTIFIER | exponentFound
+                 OPERATOR | =
+               IDENTIFIER | true
+                  KEYWORD | else
+                  COMMENT | // Two exponent found
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                  KEYWORD | else
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ' '
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ';'
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ')'
+                  KEYWORD | break
+                  KEYWORD | else
+                 FUNCTION | if (
+               IDENTIFIER | isdigit
+               IDENTIFIER | ch
+                  KEYWORD | continue
+                  KEYWORD | else
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               IDENTIFIER | r
+               IDENTIFIER | valid
+                 OPERATOR | =
+               IDENTIFIER | found
+               IDENTIFIER | strncpy
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | str
+                 OPERATOR | +
+               IDENTIFIER | index
+               IDENTIFIER | i
+                 OPERATOR | -
+               IDENTIFIER | index
+               IDENTIFIER | r
+               IDENTIFIER | str
+               IDENTIFIER | i
+                 OPERATOR | -
+               IDENTIFIER | index
+                 OPERATOR | =
+                CHARACTER | '\0'
+               IDENTIFIER | r
+               IDENTIFIER | index
+                 OPERATOR | =
+               IDENTIFIER | i
+                  KEYWORD | return
+               IDENTIFIER | r
+               BLOCK ENDS | }
+                  KEYWORD | void
+               IDENTIFIER | main
+             BLOCK BEGINS | {
+               IDENTIFIER | FILE
+                 OPERATOR | *
+               IDENTIFIER | f_ptr
+               IDENTIFIER | f_ptr
+                 OPERATOR | =
+               IDENTIFIER | fopen
+                   STRING | "input.c"
+                   STRING | "r"
+                  KEYWORD | char
+                 OPERATOR | *
+               IDENTIFIER | str
+                 OPERATOR | =
+               IDENTIFIER | NULL
+               IDENTIFIER | size_t
+               IDENTIFIER | len
+                 OPERATOR | =
+                   NUMBER | 0.554e20
+                  KEYWORD | int
+               IDENTIFIER | line_no
+                 OPERATOR | =
+                  KEYWORD | char
+               IDENTIFIER | ch
+               IDENTIFIER | ch_n
+               IDENTIFIER | buffer
+                   NUMBER | 500
+                  KEYWORD | struct
+               IDENTIFIER | returnParams
+               IDENTIFIER | r
+                 FUNCTION | while (
+               IDENTIFIER | getline
+               IDENTIFIER | str
+               IDENTIFIER | len
+               IDENTIFIER | f_ptr
+      RELATIONAL OPERATOR | !=
+                 OPERATOR | -
+             BLOCK BEGINS | {
+               IDENTIFIER | line_no
+                 OPERATOR | +
+                 OPERATOR | +
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | i
+             BLOCK BEGINS | {
+               IDENTIFIER | ch
+                 OPERATOR | =
+               IDENTIFIER | str
+               IDENTIFIER | i
+               IDENTIFIER | ch_n
+                 OPERATOR | =
+               IDENTIFIER | i
+                 OPERATOR | +
+      RELATIONAL OPERATOR | !=
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+               IDENTIFIER | str
+               IDENTIFIER | i
+                 OPERATOR | +
+                CHARACTER | '\0'
+                  COMMENT | // \0 because isOperator() won't match the 2nd char accidentally
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '\t'
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | ' '
+                  KEYWORD | continue
+                  COMMENT | // Comment
+                 FUNCTION | if (
+               IDENTIFIER | ch
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '/'
+               IDENTIFIER | ch_n
+      RELATIONAL OPERATOR | ==
+                CHARACTER | '/'
+             BLOCK BEGINS | {
+               IDENTIFIER | strncpy
+               IDENTIFIER | buffer
+               IDENTIFIER | str
+                 OPERATOR | +
+               IDENTIFIER | i
+               IDENTIFIER | strlen
+               IDENTIFIER | str
+                 OPERATOR | -
+               IDENTIFIER | i
+                 OPERATOR | +
+                  COMMENT | // i -> strlen() is comment
+               IDENTIFIER | printf
+                   STRING | "Skipping Comment: %s"
+               IDENTIFIER | buffer
+                  KEYWORD | break
+                  COMMENT | // the entire line is proccessed
+               BLOCK ENDS | }
+                  KEYWORD | else
+                 FUNCTION | if (
+               IDENTIFIER | isSeparator
+               IDENTIFIER | ch
+             BLOCK BEGINS | {
+                  KEYWORD | char
+               IDENTIFIER | temp
+                 OPERATOR | =
+                   STRING | ""
+               IDENTIFIER | sprintf
+               IDENTIFIER | temp
+                   STRING | "%c"
+               IDENTIFIER | ch
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "SEPERATOR"
+               IDENTIFIER | temp
+                  KEYWORD | continue
+               BLOCK ENDS | }
+               IDENTIFIER | r
+                 OPERATOR | =
+               IDENTIFIER | isOperator
+               IDENTIFIER | ch
+               IDENTIFIER | ch_n
+               IDENTIFIER | i
+                 FUNCTION | if (
+               IDENTIFIER | r
+               IDENTIFIER | valid
+             BLOCK BEGINS | {
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | r
+               IDENTIFIER | index
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "OPERATOR"
+               IDENTIFIER | r
+               IDENTIFIER | str
+                  KEYWORD | continue
+               BLOCK ENDS | }
+               IDENTIFIER | r
+                 OPERATOR | =
+               IDENTIFIER | isConstant
+               IDENTIFIER | i
+               IDENTIFIER | str
+                 FUNCTION | if (
+               IDENTIFIER | r
+               IDENTIFIER | valid
+             BLOCK BEGINS | {
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | r
+               IDENTIFIER | index
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "LITERAL"
+               IDENTIFIER | r
+               IDENTIFIER | str
+                  KEYWORD | continue
+               BLOCK ENDS | }
+               IDENTIFIER | r
+                 OPERATOR | =
+               IDENTIFIER | isNumber
+               IDENTIFIER | i
+               IDENTIFIER | str
+                 FUNCTION | if (
+               IDENTIFIER | r
+               IDENTIFIER | valid
+             BLOCK BEGINS | {
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | r
+               IDENTIFIER | index
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "NUMBER"
+               IDENTIFIER | r
+               IDENTIFIER | str
+                  KEYWORD | continue
+               BLOCK ENDS | }
+               IDENTIFIER | r
+                 OPERATOR | =
+               IDENTIFIER | isKeyword
+               IDENTIFIER | i
+               IDENTIFIER | str
+                 FUNCTION | if (
+               IDENTIFIER | r
+               IDENTIFIER | valid
+             BLOCK BEGINS | {
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | r
+               IDENTIFIER | index
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "KEYWORD"
+               IDENTIFIER | r
+               IDENTIFIER | str
+                  KEYWORD | continue
+               BLOCK ENDS | }
+               IDENTIFIER | r
+                 OPERATOR | =
+               IDENTIFIER | isIdentifier
+               IDENTIFIER | i
+               IDENTIFIER | str
+                 FUNCTION | if (
+               IDENTIFIER | r
+               IDENTIFIER | valid
+             BLOCK BEGINS | {
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | r
+               IDENTIFIER | index
+                  COMMENT | // Checking duplicate identifier
+               IDENTIFIER | bool
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | false
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | j
+                 OPERATOR | =
+               IDENTIFIER | j
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | table_len
+               IDENTIFIER | j
+                 OPERATOR | +
+                 OPERATOR | +
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | strcmp
+               IDENTIFIER | table
+               IDENTIFIER | j
+               IDENTIFIER | type
+                   STRING | "IDENTIFIER"
+               IDENTIFIER | strcmp
+               IDENTIFIER | table
+               IDENTIFIER | j
+               IDENTIFIER | token
+               IDENTIFIER | r
+               IDENTIFIER | str
+             BLOCK BEGINS | {
+               IDENTIFIER | found
+                 OPERATOR | =
+               IDENTIFIER | true
+                  KEYWORD | break
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+                 FUNCTION | if (
+               IDENTIFIER | found
+               IDENTIFIER | insert
+               IDENTIFIER | line_no
+                   STRING | "IDENTIFIER"
+               IDENTIFIER | r
+               IDENTIFIER | str
+                  KEYWORD | continue
+               BLOCK ENDS | }
+                  COMMENT | // printf("Invalid character: %c", ch);
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               IDENTIFIER | FILE
+                 OPERATOR | *
+               IDENTIFIER | optr
+                 OPERATOR | =
+               IDENTIFIER | fopen
+                   STRING | "output.txt"
+                   STRING | "w"
+               IDENTIFIER | fprintf
+               IDENTIFIER | optr
+                   STRING | "%-3s | %-8s | %-10s | %-10s\n"
+                   STRING | "ID"
+                   STRING | "Line No."
+                   STRING | "Type"
+                   STRING | "Token"
+               IDENTIFIER | fprintf
+               IDENTIFIER | optr
+                   STRING | "---------------------------------------\n"
+                  KEYWORD | int
+               IDENTIFIER | id
+                 OPERATOR | =
+                 OPERATOR | -
+                 FUNCTION | for (
+                  KEYWORD | int
+               IDENTIFIER | i
+                 OPERATOR | =
+               IDENTIFIER | i
+      RELATIONAL OPERATOR | <
+               IDENTIFIER | table_len
+               IDENTIFIER | i
+                 OPERATOR | +
+                 OPERATOR | +
+             BLOCK BEGINS | {
+                 FUNCTION | if (
+               IDENTIFIER | strcmp
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | type
+                   STRING | "IDENTIFIER"
+      RELATIONAL OPERATOR | ==
+             BLOCK BEGINS | {
+                 OPERATOR | +
+                 OPERATOR | +
+               IDENTIFIER | id
+               IDENTIFIER | fprintf
+               IDENTIFIER | optr
+                   STRING | "%-3d | %-8d | %-10s | %-10s\n"
+               IDENTIFIER | id
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | line_no
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | type
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | token
+               BLOCK ENDS | }
+                  KEYWORD | else
+             BLOCK BEGINS | {
+               IDENTIFIER | fprintf
+               IDENTIFIER | optr
+                   STRING | "%-3c | %-8d | %-10s | %-10s\n"
+                CHARACTER | '-'
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | line_no
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | type
+               IDENTIFIER | table
+               IDENTIFIER | i
+               IDENTIFIER | token
+               BLOCK ENDS | }
+               BLOCK ENDS | }
+               IDENTIFIER | fclose
+               IDENTIFIER | f_ptr
+               IDENTIFIER | fclose
+               IDENTIFIER | optr
+               IDENTIFIER | printf
+                   STRING | "Compilation Done..\n"
+               BLOCK ENDS | }
